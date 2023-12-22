@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="categories">
+        <!--Income-->
+        <item>Salary</item>
+        <item>FD Interest</item>
+        <item>Other Income</item>
+        <!--Expenses-->
+        <item>Loan EMI</item>
+        <item>Utilities</item>
+        <item>Recharge</item>
+        <item>Food</item>
+        <item>Transportation</item>
+        <item>Rent</item>
+        <item>Shopping</item>
+        <item>Medical and Health</item>
+        <item>Personal care</item>
+        <item>Entertainment</item>
+        <item>Other Expenses</item>
+        <!--Savings-->
+        <item>Loan Repay</item>
+        <item>Monthly(14%)</item>
+        <item>Daily(10Rs)</item>
+        <!--Transfer-->
+        <item>Home giving</item>
+
+        <item>Investment</item>
+        <item>Gift</item>
+       <!-- <item>Insurance</item>
+        <item>Education</item>-->
+
+    </string-array>
+</resources>

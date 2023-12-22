@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">2024Updates</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_journal">Journal\n</string>
+    <string name="title_notes">Notes\n</string>
+    <string name="task_done">Task Done\n</string>
+
+    <string name="income">Income</string>
+    <string name="expense">Expense</string>
+</resources>
