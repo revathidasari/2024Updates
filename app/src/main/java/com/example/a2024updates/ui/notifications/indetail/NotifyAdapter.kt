@@ -46,8 +46,8 @@ class NotifyAdapter(
 
 
         holder.cardView.setOnLongClickListener {
-            val taskDao = TaskDatabase.getInstance(context)?.taskDao()
             if (holder.taskDone.isChecked) {
+                val taskDao = TaskDatabase.getInstance(context)?.taskDao()
                 taskList.remove(currentNotify)
                 notifyDataSetChanged()
                 taskDao?.delete(currentNotify)

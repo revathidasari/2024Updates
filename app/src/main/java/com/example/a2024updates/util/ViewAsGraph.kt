@@ -10,7 +10,7 @@ import android.view.View
 class ViewAsGraph(context: Context?, values: FloatArray) : View(context) {
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
     private val value_degree: FloatArray
-    private val COLORS = intArrayOf(Color.BLACK, Color.LTGRAY, Color.GRAY, Color.CYAN, Color.RED)
+    private val COLORS = intArrayOf(Color.GRAY, Color.LTGRAY, Color.GRAY, Color.CYAN, Color.RED)
     var rectf = RectF(100f, 100f, 900f, 900f)
     var temp = 0
 

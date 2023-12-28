@@ -8,7 +8,6 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.a2024updates.R
-import kotlinx.coroutines.flow.combineTransform
 
 class NoteAdapter(
     private val context: Context,
@@ -33,11 +32,12 @@ class NoteAdapter(
         val currentNote = noteList[position]
         holder.noteText.text = currentNote.title
 
-        holder.deleteNote.setOnClickListener {
+        holder.deleteNote.setOnLongClickListener {
             val noteDao = NoteDatabase.getInstance(context)?.noteDao()
             noteList.remove(currentNote)
             notifyDataSetChanged()
             noteDao?.deleteNote(currentNote)
+            true
         }
     }
 

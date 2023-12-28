@@ -243,7 +243,7 @@ class UpdateListItemActivity : AppCompatActivity() {
 
             totalBalance = totalIncome - totalExpense - totalSavings
 
-            mCategoryDao?.update(
+            mCategoryDao?.insert(
                 MonthlyCategories(
                 monthName = currentMonth?.text.toString(),
                 salary = salary,

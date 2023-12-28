@@ -43,7 +43,8 @@ class CategorizedViewsActivity : AppCompatActivity() {
         getCategoriesDataForSpecificMonth()
 
         if (monthCategory == null) {
-           monthCategory = MonthlyCategories("",0,0,0,0,0,0, 0,
+           monthCategory = MonthlyCategories(
+               currentMonth!!,0,0,0,0,0,0, 0,
             0,0,0,0,0,0, 0,
             0, 0,0,0,0,0,0,0)
         }
@@ -77,7 +78,7 @@ class CategorizedViewsActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        Log.d("revathi", "resume   monthCategory $monthCategory")
+        //Log.d("revathi", "resume   monthCategory $monthCategory")
 
         getCategoriesDataForSpecificMonth()
         Log.d("revathi", "resume 11111  monthCategory $monthCategory")
