@@ -55,9 +55,11 @@ class CategorizedViewsAdapter(
             "Loan Repay" -> monthCategory?.loanRepay.toString()
             "Monthly(14%)" -> monthCategory?.monthly14.toString()
             "Daily(10Rs)" -> monthCategory?.daily10.toString()
-            "Home giving" -> monthCategory?.homeGiving.toString()
+            "Home Giving" -> monthCategory?.homeGiving.toString()
             "Investment" -> monthCategory?.investments.toString()
             "Gift" -> monthCategory?.gift.toString()
+            "Other Savings" -> monthCategory?.otherSavings.toString()
+            "Payback to Others" -> monthCategory?.paybackToOthers.toString()
             else -> "0"
         }
         holder.itemView.setOnClickListener {
@@ -82,9 +84,11 @@ class CategorizedViewsAdapter(
                 "Loan Repay" -> intent.putExtra("amount", monthCategory?.loanRepay)
                 "Monthly(14%)" -> intent.putExtra("amount", monthCategory?.monthly14)
                 "Daily(10Rs)" -> intent.putExtra("amount", monthCategory?.daily10)
-                "Home giving" -> intent.putExtra("amount", monthCategory?.homeGiving)
+                "Home Giving" -> intent.putExtra("amount", monthCategory?.homeGiving)
                 "Investment" -> intent.putExtra("amount", monthCategory?.investments)
                 "Gift" -> intent.putExtra("amount", monthCategory?.gift)
+                "Other Savings" -> intent.putExtra("amount", monthCategory?.otherSavings)
+                "Payback to Others" -> intent.putExtra("amount", monthCategory?.paybackToOthers)
                 else -> intent.putExtra("amount", 0)
             }
            // Toast.makeText(context, "category $category ${monthCategory?.salary} ${monthCategory?.recharge}", Toast.LENGTH_SHORT).show()
@@ -114,6 +118,8 @@ class CategorizedViewsAdapter(
         this.monthCategory?.homeGiving = monthCategory.homeGiving
         this.monthCategory?.investments = monthCategory.investments
         this.monthCategory?.gift = monthCategory.gift
+        this.monthCategory?.otherSavings = monthCategory.otherSavings
+        this.monthCategory?.paybackToOthers = monthCategory.paybackToOthers
         notifyDataSetChanged()
 
     }

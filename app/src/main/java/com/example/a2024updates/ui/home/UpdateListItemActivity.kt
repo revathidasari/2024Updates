@@ -45,6 +45,8 @@ class UpdateListItemActivity : AppCompatActivity() {
     var homeGiving = 0
     var investment = 0
     var gift = 0
+    var otherSavings = 0
+    var paybackToOthers = 0
     var totalIncome = 0
     var totalExpense = 0
     var totalSavings = 0
@@ -161,6 +163,8 @@ class UpdateListItemActivity : AppCompatActivity() {
                 homeGiving = currentData.homeGiving
                 investment = currentData.investments
                 gift = currentData.gift
+                otherSavings = currentData.otherSavings
+                paybackToOthers = currentData.paybackToOthers
                 totalIncome = currentData.totalIncome
                 totalExpense = currentData.totalExpenses
                 Log.d("revathi","currentData.toString() ${currentData.salary} ${monthlyCategories?.salary} ${monthlyCategories?.loanEmi}")
@@ -204,7 +208,7 @@ class UpdateListItemActivity : AppCompatActivity() {
                 "Medical and Health" -> {
                     medicalHealth = currentAmount?.text.toString().toInt()
                 }
-                "Personal care" -> {
+                "Personal Care" -> {
                     personalCare = currentAmount?.text.toString().toInt()
                 }
                 "Entertainment" -> {
@@ -222,7 +226,7 @@ class UpdateListItemActivity : AppCompatActivity() {
                 "Daily(10Rs)" -> {
                     daily10 = currentAmount?.text.toString().toInt()
                 }
-                "Home giving" -> {
+                "Home Giving" -> {
                     homeGiving = currentAmount?.text.toString().toInt()
                 }
                 "Investment" -> {
@@ -231,6 +235,12 @@ class UpdateListItemActivity : AppCompatActivity() {
                 "Gift" -> {
                     gift = currentAmount?.text.toString().toInt()
                 }
+                "Other Savings" -> {
+                    otherSavings = currentAmount?.text.toString().toInt()
+                }
+                "Payback to Others" -> {
+                    paybackToOthers = currentAmount?.text.toString().toInt()
+                }
             }
 
             Log.d("revathi","checkkk $salary $mCategoryDao $monthlyCategories")
@@ -238,37 +248,39 @@ class UpdateListItemActivity : AppCompatActivity() {
             totalIncome = salary + fdInterest + otherIncome
             totalExpense = loanEmi + utilities + recharge +
                     food+ transportation + rent + shopping + medicalHealth + personalCare +
-                    entertainment + otherExpenses +homeGiving + investment + gift
-            totalSavings = loanRepay + monthly14 + daily10
+                    entertainment + otherExpenses +homeGiving + investment + gift + paybackToOthers
+            totalSavings = loanRepay + monthly14 + daily10 + otherSavings
 
             totalBalance = totalIncome - totalExpense - totalSavings
 
             mCategoryDao?.insert(
                 MonthlyCategories(
-                monthName = currentMonth?.text.toString(),
-                salary = salary,
-                fdInterest = fdInterest,
-                otherIncome = otherIncome,
-                loanEmi = loanEmi,
-                utilities = utilities,
-                recharge = recharge,
-                food = food,
-                transportation = transportation,
-                rent = rent,
-                shopping = shopping,
-                medicalHealth = medicalHealth,
-                personalCare = personalCare,
-                entertainment = entertainment,
-                otherExpenses = otherExpenses,
-                loanRepay = loanRepay,
-                monthly14 = monthly14,
-                daily10 = daily10,
-                homeGiving = homeGiving,
-                investments = investment,
-                gift = gift,
-                totalIncome = totalIncome,
-                totalExpenses = totalExpense
-            ))
+                    monthName = currentMonth?.text.toString(),
+                    salary = salary,
+                    fdInterest = fdInterest,
+                    otherIncome = otherIncome,
+                    loanEmi = loanEmi,
+                    utilities = utilities,
+                    recharge = recharge,
+                    food = food,
+                    transportation = transportation,
+                    rent = rent,
+                    shopping = shopping,
+                    medicalHealth = medicalHealth,
+                    personalCare = personalCare,
+                    entertainment = entertainment,
+                    otherExpenses = otherExpenses,
+                    investments = investment,
+                    loanRepay = loanRepay,
+                    monthly14 = monthly14,
+                    daily10 = daily10,
+                    homeGiving = homeGiving,
+                    gift = gift,
+                    otherSavings = otherSavings,
+                    paybackToOthers = paybackToOthers,
+                    totalIncome = totalIncome,
+                    totalExpenses = totalExpense
+                ))
 
 
             monthlyCategories?.let {

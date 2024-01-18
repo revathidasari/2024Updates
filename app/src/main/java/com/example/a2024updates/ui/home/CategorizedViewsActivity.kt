@@ -44,9 +44,11 @@ class CategorizedViewsActivity : AppCompatActivity() {
 
         if (monthCategory == null) {
            monthCategory = MonthlyCategories(
-               currentMonth!!,0,0,0,0,0,0, 0,
-            0,0,0,0,0,0, 0,
-            0, 0,0,0,0,0,0,0)
+               currentMonth!!, 0, 0, 0, 0, 0, 0, 0,
+               0, 0, 0, 0, 0, 0, 0,
+               0, 0, 0, 0, 0, 0,0,0,
+               0, 0
+           )
         }
         //Toast.makeText(this, "categories $monthCategory", Toast.LENGTH_SHORT).show()
        Log.d("revathi", "monthCategory $monthCategory")

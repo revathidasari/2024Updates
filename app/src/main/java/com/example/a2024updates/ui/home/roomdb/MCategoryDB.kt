@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 
 @Database(
     entities = [MonthlyCategories::class],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 abstract class MonthlyCategoriesDatabase : RoomDatabase() {
@@ -24,7 +24,7 @@ abstract class MonthlyCategoriesDatabase : RoomDatabase() {
                     INSTANCE = Room.databaseBuilder(context,
                         MonthlyCategoriesDatabase::class.java,
                         "MonthlyCategoriesDatabase")
-                        .fallbackToDestructiveMigration()
+                        .fallbackToDestructiveMigration()//table will be dropped on upgrade
                         .allowMainThreadQueries()
                         .build()
                 }

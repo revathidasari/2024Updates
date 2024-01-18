@@ -75,6 +75,12 @@ data class MonthlyCategories(
     @ColumnInfo(name = "gift")
     var gift: Int,
 
+    @ColumnInfo(name = "other_savings")
+    var otherSavings: Int,
+
+    @ColumnInfo(name = "payback_others")
+    var paybackToOthers: Int,
+
     @ColumnInfo(name = "total_income")
     var totalIncome: Int,
 

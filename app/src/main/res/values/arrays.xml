@@ -29,15 +29,17 @@
         <item>Rent</item>
         <item>Shopping</item>
         <item>Medical and Health</item>
-        <item>Personal care</item>
+        <item>Personal Care</item>
         <item>Entertainment</item>
         <item>Other Expenses</item>
         <!--Savings-->
         <item>Loan Repay</item>
         <item>Monthly(14%)</item>
         <item>Daily(10Rs)</item>
+        <item>Other Savings</item>
         <!--Transfer-->
-        <item>Home giving</item>
+        <item>Home Giving</item>
+        <item>Payback to Others</item>
 
         <item>Investment</item>
         <item>Gift</item>
