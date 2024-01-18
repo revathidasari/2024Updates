@@ -9,3 +9,9 @@ tracking my todo and other tasks
    - Notification -> create task -> new activity - to give task type, date nad icon and provides notification on selected date at 9AM.
 
 3. Multiple Databases are used by using RoomDB libraries with Data class, Dao, RoomDatabase classes.
+
+Updates ::::
+
+18 Jan 2024 ->
+1. Added columns in MonthlyCategories - Other Savings & Pay back to Others
+2. Fix - Due to case sensitive columns data is not updated in UI, so changed from Personal care -> Personal Care & Home giving -> Home Giving
