@@ -54,6 +54,7 @@ class UpdateListItemActivity : AppCompatActivity() {
     var totalExpense = 0
     var totalSavings = 0
     var totalBalance = 0
+    var extra = 0
 
     private var monthlyCategories: MonthlyCategories? = null
     private var categoriesDatabase: MonthlyCategoriesDatabase? = null
@@ -173,6 +174,7 @@ class UpdateListItemActivity : AppCompatActivity() {
                 spendingOnOthers = currentData.spendingOnOthers
                 totalIncome = currentData.totalIncome
                 totalExpense = currentData.totalExpenses
+                extra = currentData.extra
                 Log.d("revathi","currentData.toString() ${currentData.salary} ${monthlyCategories?.salary} ${monthlyCategories?.loanEmi}")
 
             }
@@ -256,6 +258,9 @@ class UpdateListItemActivity : AppCompatActivity() {
                 "Spending on Others" -> {
                     spendingOnOthers = currentAmount?.text.toString().toInt()
                 }
+                "Extra" -> {
+                    extra = currentAmount?.text.toString().toInt()
+                }
             }
 
             Log.d("revathi","checkkk $salary $mCategoryDao $monthlyCategories")
@@ -264,7 +269,7 @@ class UpdateListItemActivity : AppCompatActivity() {
             totalExpense = loanEmi + utilities + recharge +
                     food+ transportation + rent + shopping + medicalHealth + personalCare +
                     entertainment + otherExpenses +homeGiving + investment + gift + paybackToOthers +
-                    meAndOthersExpense + spendingOnOthers
+                    meAndOthersExpense + spendingOnOthers + extra
             totalSavings = loanRepay + monthly14 + daily10 + otherSavings
 
             totalBalance = totalIncome - totalExpense - totalSavings
@@ -298,7 +303,8 @@ class UpdateListItemActivity : AppCompatActivity() {
                     meAndOthersExpense = meAndOthersExpense,
                     spendingOnOthers = spendingOnOthers,
                     totalIncome = totalIncome,
-                    totalExpenses = totalExpense
+                    totalExpenses = totalExpense,
+                    extra = extra
                 ))
 
 

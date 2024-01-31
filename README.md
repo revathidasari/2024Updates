@@ -20,4 +20,7 @@ Updates ::::
 31 Jan 2024 ->
 1. Added columns in MonthlyCategories - Get from Others, Me and Others Expense & Spending on Others
 2. update DB version
-// Fix - On MCategoryDB update we are losing the data, included addMigration to persist the data.
+
+3. Fix - On MCategoryDB update we are losing the data, included addMigration to persist the data.
+4. update MCategory DB to 4
+5. Added Extra column in MCategoryDB

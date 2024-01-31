@@ -94,6 +94,9 @@ data class MonthlyCategories(
     var totalIncome: Int,
 
     @ColumnInfo(name = "total_expenses")
-    var totalExpenses: Int
+    var totalExpenses: Int,
+
+    @ColumnInfo(name = "extra")
+    var extra: Int
 
 )

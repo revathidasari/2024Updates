@@ -47,7 +47,7 @@ class CategorizedViewsActivity : AppCompatActivity() {
                currentMonth!!, 0, 0, 0, 0, 0, 0, 0,
                0, 0, 0, 0, 0, 0, 0,
                0, 0, 0, 0, 0, 0,0,0,
-               0, 0, 0, 0, 0
+               0, 0, 0, 0, 0, 0
            )
         }
         //Toast.makeText(this, "categories $monthCategory", Toast.LENGTH_SHORT).show()

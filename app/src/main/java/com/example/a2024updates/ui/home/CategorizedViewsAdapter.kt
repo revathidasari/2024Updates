@@ -63,6 +63,7 @@ class CategorizedViewsAdapter(
             "Get from Others" -> monthCategory?.getFromOthers.toString()
             "Me and Others Expense" -> monthCategory?.meAndOthersExpense.toString()
             "Spending on Others" -> monthCategory?.spendingOnOthers.toString()
+            "Extra" -> monthCategory?.extra.toString()
             else -> "0"
         }
         holder.itemView.setOnClickListener {
@@ -95,6 +96,7 @@ class CategorizedViewsAdapter(
                 "Get from Others" -> intent.putExtra("amount", monthCategory?.getFromOthers)
                 "Me and Others Expense" -> intent.putExtra("amount", monthCategory?.meAndOthersExpense)
                 "Spending on Others" -> intent.putExtra("amount", monthCategory?.spendingOnOthers)
+                "Extra" -> intent.putExtra("amount", monthCategory?.extra)
                 else -> intent.putExtra("amount", 0)
             }
            // Toast.makeText(context, "category $category ${monthCategory?.salary} ${monthCategory?.recharge}", Toast.LENGTH_SHORT).show()
@@ -129,6 +131,7 @@ class CategorizedViewsAdapter(
         this.monthCategory?.getFromOthers = monthCategory.getFromOthers
         this.monthCategory?.meAndOthersExpense = monthCategory.meAndOthersExpense
         this.monthCategory?.spendingOnOthers = monthCategory.spendingOnOthers
+        this.monthCategory?.extra = monthCategory.extra
         notifyDataSetChanged()
 
     }
