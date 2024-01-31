@@ -81,6 +81,15 @@ data class MonthlyCategories(
     @ColumnInfo(name = "payback_others")
     var paybackToOthers: Int,
 
+    @ColumnInfo(name = "get_from_others")
+    var getFromOthers: Int,
+
+    @ColumnInfo(name = "me_others_expense")
+    var meAndOthersExpense: Int,
+
+    @ColumnInfo(name = "spending_others")
+    var spendingOnOthers: Int,
+
     @ColumnInfo(name = "total_income")
     var totalIncome: Int,
 

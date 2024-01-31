@@ -15,3 +15,9 @@ Updates ::::
 18 Jan 2024 ->
 1. Added columns in MonthlyCategories - Other Savings & Pay back to Others
 2. Fix - Due to case sensitive columns data is not updated in UI, so changed from Personal care -> Personal Care & Home giving -> Home Giving
+
+
+31 Jan 2024 ->
+1. Added columns in MonthlyCategories - Get from Others, Me and Others Expense & Spending on Others
+2. update DB version
+// Fix - On MCategoryDB update we are losing the data, included addMigration to persist the data.

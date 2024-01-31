@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 
 @Database(
     entities = [MonthlyCategories::class],
-    version = 2,
+    version = 3,
     exportSchema = false
 )
 abstract class MonthlyCategoriesDatabase : RoomDatabase() {

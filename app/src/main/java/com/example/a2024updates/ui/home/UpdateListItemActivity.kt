@@ -47,6 +47,9 @@ class UpdateListItemActivity : AppCompatActivity() {
     var gift = 0
     var otherSavings = 0
     var paybackToOthers = 0
+    var getFromOthers = 0
+    var meAndOthersExpense = 0
+    var spendingOnOthers = 0
     var totalIncome = 0
     var totalExpense = 0
     var totalSavings = 0
@@ -165,6 +168,9 @@ class UpdateListItemActivity : AppCompatActivity() {
                 gift = currentData.gift
                 otherSavings = currentData.otherSavings
                 paybackToOthers = currentData.paybackToOthers
+                getFromOthers = currentData.getFromOthers
+                meAndOthersExpense = currentData.meAndOthersExpense
+                spendingOnOthers = currentData.spendingOnOthers
                 totalIncome = currentData.totalIncome
                 totalExpense = currentData.totalExpenses
                 Log.d("revathi","currentData.toString() ${currentData.salary} ${monthlyCategories?.salary} ${monthlyCategories?.loanEmi}")
@@ -241,14 +247,24 @@ class UpdateListItemActivity : AppCompatActivity() {
                 "Payback to Others" -> {
                     paybackToOthers = currentAmount?.text.toString().toInt()
                 }
+                "Get from Others"-> {
+                    getFromOthers = currentAmount?.text.toString().toInt()
+                }
+                "Me and Others Expense" -> {
+                    meAndOthersExpense = currentAmount?.text.toString().toInt()
+                }
+                "Spending on Others" -> {
+                    spendingOnOthers = currentAmount?.text.toString().toInt()
+                }
             }
 
             Log.d("revathi","checkkk $salary $mCategoryDao $monthlyCategories")
 
-            totalIncome = salary + fdInterest + otherIncome
+            totalIncome = salary + fdInterest + otherIncome + getFromOthers
             totalExpense = loanEmi + utilities + recharge +
                     food+ transportation + rent + shopping + medicalHealth + personalCare +
-                    entertainment + otherExpenses +homeGiving + investment + gift + paybackToOthers
+                    entertainment + otherExpenses +homeGiving + investment + gift + paybackToOthers +
+                    meAndOthersExpense + spendingOnOthers
             totalSavings = loanRepay + monthly14 + daily10 + otherSavings
 
             totalBalance = totalIncome - totalExpense - totalSavings
@@ -278,6 +294,9 @@ class UpdateListItemActivity : AppCompatActivity() {
                     gift = gift,
                     otherSavings = otherSavings,
                     paybackToOthers = paybackToOthers,
+                    getFromOthers = getFromOthers,
+                    meAndOthersExpense = meAndOthersExpense,
+                    spendingOnOthers = spendingOnOthers,
                     totalIncome = totalIncome,
                     totalExpenses = totalExpense
                 ))
